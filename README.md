@@ -1,5 +1,5 @@
 # Getting-and-Cleaning-Data
-Repository for the Week 3 R assignments
+This read Me fil explains the run-Analysis.R script that has been created as a part of week 3 assignments in ```Getting and Cleaning Data course```
 
 R script that does the following has been created
    * Merges the training and the test sets to create one data set.
