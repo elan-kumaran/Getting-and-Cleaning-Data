@@ -1,5 +1,5 @@
 ##CodeBook for the Week 3 Getting and Cleaning data assignment
-
+This codebook describes the variables used in the R script. Please read [READ ME](ReadMe.md) for further details on how the script works.
 ##Attributes
 Attributes for this are downloaded from the link below
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
@@ -17,51 +17,96 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-* tBodyAcc-XYZ
-* tGravityAcc-XYZ
-* tBodyAccJerk-XYZ
-* tBodyGyro-XYZ
-* tBodyGyroJerk-XYZ
-* tBodyAccMag
-* tGravityAccMag
-* tBodyAccJerkMag
-* tBodyGyroMag
-* tBodyGyroJerkMag
-* fBodyAcc-XYZ
-* fBodyAccJerk-XYZ
-* fBodyGyro-XYZ
-* fBodyAccMag
-* fBodyAccJerkMag
-* fBodyGyroMag
-* fBodyGyroJerkMag
-
-The set of variables that were estimated from these signals are: 
-
-* mean(): Mean value
-* std(): Standard deviation
-* mad(): Median absolute deviation 
-* max(): Largest value in array
-* min(): Smallest value in array
-* sma(): Signal magnitude area
-* energy(): Energy measure. Sum of the squares divided by the number of values. 
-* iqr(): Interquartile range 
-* entropy(): Signal entropy
-* arCoeff(): Autorregresion coefficients with Burg order equal to 4
-* correlation(): correlation coefficient between two signals
-* maxInds(): index of the frequency component with largest magnitude
-* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-* skewness(): skewness of the frequency domain signal 
-* kurtosis(): kurtosis of the frequency domain signal 
-* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-* angle(): Angle between to vectors.
-
-Additional vectors obtained by averaging the signals in a signal window sample. These are used on the angle() variable:
-
-* gravityMean
-* tBodyAccMean
-* tBodyAccJerkMean
-* tBodyGyroMean
-* tBodyGyroJerkMean
-
-
 The complete list of variables of each feature vector is available in 'features.txt'
+
+##Tidy Dataset
+* The input X files, Y files and the Subject file was merged for each test and the training datasets
+* mean() and std()columns were extracted from the X files
+* A new table was created grouped on the ```Subject_ID and the Actvity_labels``` and averaging all the columns(mean and std
+columns)
+
+## Attributes in the tidy dataset
+```
+Subject_id
+Activity_labels
+Activity_code
+X1Time.BodyAccmeanX
+X2Time.BodyAccmeanY
+X3Time.BodyAccmeanZ
+X41Time.GravityAccmeanX
+X42Time.GravityAccmeanY
+X43Time.GravityAccmeanZ
+X81Time.BodyAccJerkmeanX
+X82Time.BodyAccJerkmeanY
+X83Time.BodyAccJerkmeanZ
+X121Time.BodyGyromeanX
+X122Time.BodyGyromeanY
+X123Time.BodyGyromeanZ
+X161Time.BodyGyroJerkmeanX
+X162Time.BodyGyroJerkmeanY
+X163Time.BodyGyroJerkmeanZ
+X201Time.BodyAccMagmean
+X214Time.GravityAccMagmean
+X227Time.BodyAccJerkMagmean
+X240Time.BodyGyroMagmean
+X253Time.BodyGyroJerkMagmean
+X266Frequency.BodyAccmeanX
+X267Frequency.BodyAccmeanY
+X268Frequency.BodyAccmeanZ
+X294Frequency.BodyAccmeanFreqX
+X295Frequency.BodyAccmeanFreqY
+X296Frequency.BodyAccmeanFreqZ
+X345Frequency.BodyAccJerkmeanX
+X346Frequency.BodyAccJerkmeanY
+X347Frequency.BodyAccJerkmeanZ
+X373Frequency.BodyAccJerkmeanFreqX
+X374Frequency.BodyAccJerkmeanFreqY
+X375Frequency.BodyAccJerkmeanFreqZ
+X424Frequency.BodyGyromeanX
+X425Frequency.BodyGyromeanY
+X426Frequency.BodyGyromeanZ
+X452Frequency.BodyGyromeanFreqX
+X453Frequency.BodyGyromeanFreqY
+X454Frequency.BodyGyromeanFreqZ
+X503Frequency.BodyAccMagmean
+X513Frequency.BodyAccMagmeanFreq
+X516Frequency.BodyBodyAccJerkMagmean
+X526Frequency.BodyBodyAccJerkMagmeanFreq
+X529Frequency.BodyBodyGyroMagmean
+X539Frequency.BodyBodyGyroMagmeanFreq
+X542Frequency.BodyBodyGyroJerkMagmean
+X552Frequency.BodyBodyGyroJerkMagmeanFreq
+X4Time.BodyAccstdX
+X5Time.BodyAccstdY
+X6Time.BodyAccstdZ
+X44Time.GravityAccstdX
+X45Time.GravityAccstdY
+X46Time.GravityAccstdZ
+X84Time.BodyAccJerkstdX
+X85Time.BodyAccJerkstdY
+X86Time.BodyAccJerkstdZ
+X124Time.BodyGyrostdX
+X125Time.BodyGyrostdY
+X126Time.BodyGyrostdZ
+X164Time.BodyGyroJerkstdX
+X165Time.BodyGyroJerkstdY
+X166Time.BodyGyroJerkstdZ
+X202Time.BodyAccMagstd
+X215Time.GravityAccMagstd
+X228Time.BodyAccJerkMagstd
+X241Time.BodyGyroMagstd
+X254Time.BodyGyroJerkMagstd
+X269Frequency.BodyAccstdX
+X270Frequency.BodyAccstdY
+X271Frequency.BodyAccstdZ
+X348Frequency.BodyAccJerkstdX
+X349Frequency.BodyAccJerkstdY
+X350Frequency.BodyAccJerkstdZ
+X427Frequency.BodyGyrostdX
+X428Frequency.BodyGyrostdY
+X429Frequency.BodyGyrostdZ
+X504Frequency.BodyAccMagstd
+X517Frequency.BodyBodyAccJerkMagstd
+X530Frequency.BodyBodyGyroMagstd
+X543Frequency.BodyBodyGyroJerkMagstd
+```
