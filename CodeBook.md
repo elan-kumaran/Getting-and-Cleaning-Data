@@ -1,5 +1,5 @@
 ##CodeBook for the Week 3 Getting and Cleaning data assignment
-This codebook describes the variables used in the R script. Please read [READ ME](ReadMe.md) for further details on how the script works.
+This codebook describes the variables used in the R script. Please read [READ ME](README.md) for further details on how the script works.
 ##Attributes
 Attributes for this are downloaded from the link below
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
